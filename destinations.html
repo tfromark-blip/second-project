@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
+
+<meta name="description"
+      content="Explore beautiful tourist destinations and accommodation options in Lesotho.">
+
+<title>Lesotho Tourism | Destinations</title>
+
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #f8f9fa;
+    color: #17202a;
+    transition: 0.3s;
+}
+
+.navbar {
+    background: #0b2638 !important;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    width: 210px;
+    height: 55px;
+    padding: 0;
+    margin: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.navbar-brand img {
+    display: block;
+    width: 210px;
+    height: 55px;
+    max-width: 210px;
+    max-height: 55px;
+    object-fit: contain;
+    object-position: left center;
+    flex-shrink: 0;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav-link:hover {
+    color: #f4c95d !important;
+}
+
+.dark-btn {
+    border: 1px solid #f4c95d;
+    background: transparent;
+    color: #f4c95d;
+    padding: 7px 15px;
+    border-radius: 25px;
+}
+
+.dark-btn:hover {
+    background: #f4c95d;
+    color: #0b2638;
+}
+
+.page-header {
+    background:
+        linear-gradient(rgba(11,38,56,.78),
+        rgba(11,38,56,.78)),
+        url("images/qiloane.png") center/cover;
+
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.page-header h1 {
+    font-size: clamp(40px, 7vw, 65px);
+    font-weight: 800;
+}
+
+.page-header span {
+    color: #f4c95d;
+}
+
+.search-box {
+    max-width: 600px;
+    margin: -35px auto 50px;
+    position: relative;
+    z-index: 5;
+}
+
+.search-box input {
+    border-radius: 30px;
+    padding: 16px 25px;
+    border: 3px solid #f4c95d;
+    box-shadow: 0 8px 25px rgba(0,0,0,.12);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    color: #0b2638;
+    font-weight: 800;
+}
+
+.destination-card,
+.accommodation-card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    height: 100%;
+    transition: .3s;
+}
+
+.destination-card:hover,
+.accommodation-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-body h4 {
+    color: #0b2638;
+    font-weight: bold;
+}
+
+.badge-custom {
+    background: #f4c95d;
+    color: #0b2638;
+    border-radius: 20px;
+    padding: 7px 13px;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0b2638;
+}
+
+.accommodation-card {
+    padding: 25px;
+}
+
+footer {
+    margin-top: 70px;
+    background: #0b2638;
+    color: white;
+    padding: 45px 0 20px;
+}
+
+footer h5 {
+    color: #f4c95d;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #f4c95d;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.2);
+    margin-top: 25px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+body.dark-mode {
+    background: #111820;
+    color: white;
+}
+
+body.dark-mode .section-title h2,
+body.dark-mode .card-body h4 {
+    color: #f4c95d;
+}
+
+body.dark-mode .destination-card,
+body.dark-mode .accommodation-card {
+    background: #1c2730;
+    color: white;
+}
+
+body.dark-mode .price {
+    color: #f4c95d;
+}
+
+@media(max-width:768px) {
+
+    .navbar-brand {
+        width: 165px;
+        height: 48px;
+        padding: 0;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .navbar-brand img {
+        width: 165px;
+        height: 48px;
+        max-width: 165px;
+        max-height: 48px;
+        object-fit: contain;
+        object-position: left center;
+    }
+
+    .page-header {
+        padding: 70px 15px;
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .navbar-brand {
+        width: 150px;
+        height: 45px;
+        flex-shrink: 0;
+    }
+
+    .navbar-brand img {
+        width: 150px;
+        height: 45px;
+        max-width: 150px;
+        max-height: 45px;
+        object-fit: contain;
+        object-position: left center;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+<div class="container">
+
+<a class="navbar-brand" href="index.html">
+
+<img
+src="Lesotho Tourism Mountain Emblem.png"
+alt="Lesotho Tourism Logo">
+
+</a>
+
+<button
+class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navigation"
+aria-label="Open navigation">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navigation">
+
+<ul class="navbar-nav ms-auto align-items-lg-center">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="destinations.html">
+Destinations
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="activities.html">
+Activities
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="gallery.html">
+Gallery
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="contact.html">
+Contact
+</a>
+</li>
+
+<li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+
+<button
+class="dark-btn"
+onclick="toggleDarkMode()">
+
+🌙 Dark Mode
+
+</button>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<main>
+
+<section class="page-header">
+
+<h1>
+Explore <span>Destinations</span>
+</h1>
+
+<p>
+Discover the landscapes and places that make Lesotho unique.
+</p>
+
+</section>
+
+
+<div class="container">
+
+<div class="search-box">
+
+<input
+type="search"
+id="destinationSearch"
+class="form-control"
+placeholder="🔍 Search destinations..."
+aria-label="Search destinations"
+onkeyup="searchDestinations()">
+
+</div>
+
+
+<section>
+
+<div class="section-title">
+
+<h2>Popular Destinations</h2>
+
+<p>
+Find inspiration for your next Lesotho adventure.
+</p>
+
+</div>
+
+
+<div class="row g-4" id="destinationList">
+
+
+<article class="col-md-6 col-lg-4 destination-item">
+
+<div class="destination-card">
+
+<img
+src="qiloane.jpg"
+alt="Qiloane mountain landscape">
+
+<div class="card-body">
+
+<span class="badge-custom">Nature</span>
+
+<h4 class="mt-3">Qiloane</h4>
+
+<p>
+Experience one of Lesotho's iconic mountain landscapes.
+</p>
+
+<a
+href="contact.html"
+class="btn btn-dark">
+
+Plan Visit
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<article class="col-md-6 col-lg-4 destination-item">
+
+<div class="destination-card">
+
+<img
+src="Maletsunyane landscape.jpg"
+alt="Maletsunyane landscape">
+
+<div class="card-body">
+
+<span class="badge-custom">Adventure</span>
+
+<h4 class="mt-3">
+Maletsunyane
+</h4>
+
+<p>
+Discover spectacular scenery and exciting outdoor experiences.
+</p>
+
+<a
+href="contact.html"
+class="btn btn-dark">
+
+Plan Visit
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<article class="col-md-6 col-lg-4 destination-item">
+
+<div class="destination-card">
+
+<img
+src="Lesotho highland landscape.jpg"
+alt="Lesotho highland landscape">
+
+<div class="card-body">
+
+<span class="badge-custom">Highlands</span>
+
+<h4 class="mt-3">
+Mountain Highlands
+</h4>
+
+<p>
+Enjoy dramatic scenery, fresh mountain air and peaceful views.
+</p>
+
+<a
+href="contact.html"
+class="btn btn-dark">
+
+Plan Visit
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<article class="col-md-6 col-lg-4 destination-item">
+
+<div class="destination-card">
+
+<img
+src="Traditional Lesotho landscape.jpg"
+alt="Traditional Lesotho landscape">
+
+<div class="card-body">
+
+<span class="badge-custom">Culture</span>
+
+<h4 class="mt-3">
+Basotho Villages
+</h4>
+
+<p>
+Experience local traditions and the welcoming spirit of Basotho communities.
+</p>
+
+<a
+href="contact.html"
+class="btn btn-dark">
+
+Plan Visit
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<article class="col-md-6 col-lg-4 destination-item">
+
+<div class="destination-card">
+
+<img
+src="Lesotho waterfall landscape.jpg"
+alt="Lesotho waterfall landscape">
+
+<div class="card-body">
+
+<span class="badge-custom">Waterfalls</span>
+
+<h4 class="mt-3">
+Waterfall Experiences
+</h4>
+
+<p>
+Discover spectacular natural scenery and unforgettable viewpoints.
+</p>
+
+<a
+href="contact.html"
+class="btn btn-dark">
+
+Plan Visit
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<article class="col-md-6 col-lg-4 destination-item">
+
+<div class="destination-card">
+
+<img
+src="Lesotho mountain scenery.jpg"
+alt="Lesotho countryside">
+
+<div class="card-body">
+
+<span class="badge-custom">Scenery</span>
+
+<h4 class="mt-3">
+Lesotho Countryside
+</h4>
+
+<p>
+Travel through beautiful landscapes and peaceful rural surroundings.
+</p>
+
+<a
+href="contact.html"
+class="btn btn-dark">
+
+Plan Visit
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+<p
+id="noDestinationResults"
+class="text-center d-none mt-4">
+
+No destinations match your search.
+
+</p>
+
+</section>
+
+
+<!-- ACCOMMODATION -->
+
+<section>
+
+<div class="section-title">
+
+<h2>Accommodation</h2>
+
+<p>
+Choose a comfortable base for your journey.
+</p>
+
+</div>
+
+<div class="row g-4">
+
+
+<article class="col-md-6 col-lg-4">
+
+<div class="accommodation-card">
+
+<span class="badge-custom">
+Comfort
+</span>
+
+<h4 class="mt-3">
+Mountain Lodge
+</h4>
+
+<p>
+A peaceful accommodation option surrounded by mountain scenery.
+</p>
+
+<div class="price">
+From M850 / night
+</div>
+
+<a
+href="contact.html"
+class="btn btn-dark mt-3">
+
+Book Now
+
+</a>
+
+</div>
+
+</article>
+
+
+<article class="col-md-6 col-lg-4">
+
+<div class="accommodation-card">
+
+<span class="badge-custom">
+Traditional
+</span>
+
+<h4 class="mt-3">
+Basotho Guesthouse
+</h4>
+
+<p>
+Enjoy local hospitality and a more traditional travel experience.
+</p>
+
+<div class="price">
+From M650 / night
+</div>
+
+<a
+href="contact.html"
+class="btn btn-dark mt-3">
+
+Book Now
+
+</a>
+
+</div>
+
+</article>
+
+
+<article class="col-md-6 col-lg-4">
+
+<div class="accommodation-card">
+
+<span class="badge-custom">
+Premium
+</span>
+
+<h4 class="mt-3">
+Highland Retreat
+</h4>
+
+<p>
+A comfortable retreat for visitors seeking a relaxing experience.
+</p>
+
+<div class="price">
+From M1200 / night
+</div>
+
+<a
+href="contact.html"
+class="btn btn-dark mt-3">
+
+Book Now
+
+</a>
+
+</div>
+
+</article>
+
+
+</div>
+
+</section>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-6">
+
+<h5>Lesotho Tourism</h5>
+
+<p>
+Discover the Kingdom in the Sky.
+</p>
+
+</div>
+
+<div class="col-md-6">
+
+<h5>Quick Links</h5>
+
+<a href="index.html">Home</a> |
+<a href="activities.html">Activities</a> |
+<a href="gallery.html">Gallery</a> |
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+© <span id="year"></span> Lesotho Tourism.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Lesotho Tourism | Contact & Booking</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #f5f7f8;
+    color: #17202a;
+    transition: .3s;
+}
+
+.navbar {
+    background: #0b2638 !important;
+    padding: 15px 0;
+}
+
+/* LOGO */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    width: 210px;
+    height: 55px;
+    padding: 0;
+    margin: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.navbar-brand img {
+    display: block;
+    width: 210px;
+    height: 55px;
+    max-width: 210px;
+    max-height: 55px;
+    object-fit: contain;
+    object-position: left center;
+    flex-shrink: 0;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 600;
+    margin-left: 12px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #f4c95d !important;
+}
+
+.dark-btn {
+    border: 1px solid #f4c95d;
+    background: transparent;
+    color: #f4c95d;
+    padding: 7px 15px;
+    border-radius: 25px;
+}
+
+.dark-btn:hover {
+    background: #f4c95d;
+    color: #0b2638;
+}
+
+.page-header {
+    background:
+        linear-gradient(
+            rgba(11,38,56,.72),
+            rgba(11,38,56,.72)
+        ),
+        url("images/qiloane.png") center/cover;
+
+    text-align: center;
+    color: white;
+    padding: 90px 20px;
+}
+
+.page-header small {
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.page-header h1 {
+    font-size: clamp(40px,7vw,65px);
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.page-header span {
+    color: #f4c95d;
+}
+
+.page-header p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.form-section {
+    padding: 55px 0;
+}
+
+.form-card {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.10);
+    height: 100%;
+}
+
+.form-card h2 {
+    color: #0b2638;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.form-intro {
+    color: #68737d;
+    margin-bottom: 25px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control,
+.form-select {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #d6dce1;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #f4c95d;
+    box-shadow: 0 0 0 .2rem rgba(244,201,93,.25);
+}
+
+.gold-btn {
+    background: #f4c95d;
+    color: #0b2638;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.gold-btn:hover {
+    background: #0b2638;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.calculator {
+    background: #0b2638;
+    color: white;
+    padding: 30px;
+    border-radius: 18px;
+    margin-top: 25px;
+}
+
+.calculator h3 {
+    color: #f4c95d;
+    font-weight: 800;
+}
+
+.cost-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    padding: 10px 0;
+}
+
+.total-cost {
+    font-size: 30px;
+    font-weight: bold;
+    color: #f4c95d;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.contact-info {
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 18px;
+    background: linear-gradient(
+        135deg,
+        #0b2638,
+        #153f55
+    );
+    color: white;
+}
+
+.contact-info h4 {
+    color: #f4c95d;
+    font-weight: 800;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    max-width: 48px;
+    border-radius: 50%;
+    background: #f4c95d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.contact-icon img {
+    width: 25px;
+    height: 25px;
+    max-width: 25px;
+    max-height: 25px;
+    object-fit: contain;
+    display: block;
+}
+
+.why-section {
+    margin-top: 35px;
+    background: white;
+    border-radius: 22px;
+    padding: 35px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.08);
+}
+
+.why-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+}
+
+.why-section h2 {
+    color: #0b2638;
+    font-weight: 800;
+}
+
+.why-section h2 span {
+    color: #f4c95d;
+}
+
+.why-intro {
+    color: #68737d;
+    max-width: 700px;
+}
+
+.why-card {
+    padding: 20px;
+    text-align: center;
+    border-radius: 16px;
+    background: #f8fafb;
+    height: 100%;
+    transition: .3s;
+}
+
+.why-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.10);
+}
+
+.why-icon {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    max-width: 64px;
+    min-height: 64px;
+    max-height: 64px;
+    border-radius: 50%;
+    background: #fff1c7;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.why-icon img {
+    width: 34px;
+    height: 34px;
+    max-width: 34px;
+    max-height: 34px;
+    object-fit: contain;
+    display: block;
+}
+
+.why-card h5 {
+    color: #0b2638;
+    font-weight: 800;
+}
+
+.why-card p {
+    color: #68737d;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.travel-message {
+    margin-top: 25px;
+    padding: 18px 25px;
+    background: #fff4d1;
+    border-left: 5px solid #f4c95d;
+    border-radius: 12px;
+    color: #0b2638;
+    font-weight: 600;
+}
+
+footer {
+    margin-top: 70px;
+    background: #0b2638;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+footer h5 {
+    color: #f4c95d;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+footer a:hover {
+    color: #f4c95d;
+}
+
+.footer-brand {
+    font-size: 24px;
+    color: #f4c95d;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.2);
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+body.dark-mode {
+    background: #111820;
+    color: white;
+}
+
+body.dark-mode .form-card,
+body.dark-mode .why-section {
+    background: #1c2730;
+    color: white;
+}
+
+body.dark-mode .form-card h2,
+body.dark-mode .why-section h2,
+body.dark-mode .why-card h5 {
+    color: #f4c95d;
+}
+
+body.dark-mode .form-intro,
+body.dark-mode .why-intro,
+body.dark-mode .why-card p {
+    color: #d5dce1;
+}
+
+body.dark-mode .why-card {
+    background: #26333d;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background: #26333d;
+    color: white;
+    border-color: #52616b;
+}
+
+body.dark-mode .form-label {
+    color: white;
+}
+
+/* LOGO RESPONSIVE MEDIA QUERIES */
+
+@media(max-width:768px) {
+
+    .navbar-brand {
+        width: 165px;
+        height: 48px;
+        padding: 0;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .navbar-brand img {
+        width: 165px;
+        height: 48px;
+        max-width: 165px;
+        max-height: 48px;
+        object-fit: contain;
+        object-position: left center;
+    }
+
+    .page-header {
+        padding: 70px 15px;
+    }
+
+    .page-header h1 {
+        font-size: 42px;
+    }
+
+    .form-card {
+        padding: 25px 20px;
+    }
+
+    .why-section {
+        padding: 25px 18px;
+    }
+
+    .why-image {
+        height: 240px;
+    }
+
+    .total-cost {
+        font-size: 25px;
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .navbar-brand {
+        width: 150px;
+        height: 45px;
+        flex-shrink: 0;
+    }
+
+    .navbar-brand img {
+        width: 150px;
+        height: 45px;
+        max-width: 150px;
+        max-height: 45px;
+        object-fit: contain;
+        object-position: left center;
+    }
+
+    .page-header h1 {
+        font-size: 36px;
+    }
+
+    .page-header p {
+        font-size: 16px;
+    }
+
+    .calculator {
+        padding: 22px;
+    }
+
+    .why-section {
+        padding: 20px 15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+<div class="container">
+
+<a class="navbar-brand" href="index.html">
+
+<img src="Lesotho Tourism Mountain Emblem.png" alt="Lesotho Tourism Logo">
+
+</a>
+
+<button
+class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navigation"
+aria-label="Open navigation">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navigation">
+
+<ul class="navbar-nav ms-auto align-items-lg-center">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="destinations.html">Destinations</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="activities.html">Activities</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="gallery.html">Gallery</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="contact.html">Contact</a>
+</li>
+
+<li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+
+<button
+class="dark-btn"
+onclick="toggleDarkMode()">
+
+🌙 Dark Mode
+
+</button>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+</header>
+
+<main>
+
+<section class="page-header">
+
+<small>GET IN TOUCH</small>
+
+<h1>
+Plan Your <span>Lesotho</span> Adventure
+</h1>
+
+<p>
+We're here to help you create unforgettable memories.
+Fill in the form below to book your trip or get more
+information about our tours and services.
+</p>
+
+</section>
+
+<section class="form-section">
+
+<div class="container">
+
+<div class="row g-4">
+
+<div class="col-lg-7">
+
+<div class="form-card">
+
+<h2> Book Your Trip</h2>
+
+<p class="form-intro">
+Fill in the details below and we'll help you plan
+the best experience for your trip.
+</p>
+
+<form id="bookingForm" novalidate>
+
+<div class="row g-3">
+
+<div class="col-md-6">
+
+<label for="bookingName" class="form-label">
+Full Name
+</label>
+
+<input
+type="text"
+class="form-control"
+id="bookingName"
+name="name"
+placeholder="Enter your full name"
+required>
+
+<div class="invalid-feedback">
+Please enter your full name.
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<label for="bookingEmail" class="form-label">
+Email Address
+</label>
+
+<input
+type="email"
+class="form-control"
+id="bookingEmail"
+name="email"
+placeholder="example@email.com"
+required>
+
+<div class="invalid-feedback">
+Please enter a valid email address.
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<label for="bookingPhone" class="form-label">
+Phone Number
+</label>
+
+<input
+type="tel"
+class="form-control"
+id="bookingPhone"
+name="phone"
+placeholder="+266..."
+required>
+
+<div class="invalid-feedback">
+Please enter your phone number.
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<label for="travelDate" class="form-label">
+Travel Date
+</label>
+
+<input
+type="date"
+class="form-control"
+id="travelDate"
+name="travelDate"
+required>
+
+<div class="invalid-feedback">
+Please select your travel date.
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<label for="destination" class="form-label">
+Destination
+</label>
+
+<select
+class="form-select"
+id="destination"
+name="destination"
+required
+onchange="calculateBooking()">
+
+<option value="">Select destination</option>
+<option value="qiloane">Qiloane</option>
+<option value="qiloane">Kome Cave</option>
+<option value="qiloane">Ha Eso Malimong</option>
+<option value="qiloane">Tshehlanyane</option>
+<option value="maletsunyane">Maletsunyane</option>
+<option value="highlands">Mountain Highlands</option>
+<option value="villages">Basotho Villages</option>
+
+</select>
+
+<div class="invalid-feedback">
+Please select a destination.
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<label for="guests" class="form-label">
+Number of Guests
+</label>
+
+<input
+type="number"
+class="form-control"
+id="guests"
+name="guests"
+min="1"
+max="50"
+value="1"
+required
+oninput="calculateBooking()">
+
+<div class="invalid-feedback">
+Please enter between 1 and 50 guests.
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<label for="days" class="form-label">
+Number of Days
+</label>
+
+<input
+type="number"
+class="form-control"
+id="days"
+name="days"
+min="1"
+max="30"
+value="1"
+required
+oninput="calculateBooking()">
+
+<div class="invalid-feedback">
+Please enter between 1 and 30 days.
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<label for="activity" class="form-label">
+Main Activity
+</label>
+
+<select
+class="form-select"
+id="activity"
+name="activity"
+required
+onchange="calculateBooking()">
+
+<option value="">Select activity</option>
+<option value="hiking">Mountain Hiking</option>
+<option value="horse">Horse Riding</option>
+<option value="culture">Cultural Experience</option>
+<option value="sightseeing">Scenic Sightseeing</option>
+
+</select>
+
+<div class="invalid-feedback">
+Please select an activity.
+</div>
+
+</div>
+
+<div class="col-12">
+
+<label for="additionalInfo" class="form-label">
+Additional Information
+</label>
+
+<textarea
+class="form-control"
+id="additionalInfo"
+rows="4"
+placeholder="Tell us anything else about your trip..."></textarea>
+
+</div>
+
+<div class="col-12">
+
+<button type="submit" class="gold-btn">
+✈ Submit Booking
+</button>
+
+</div>
+
+</div>
+
+</form>
+
+<div class="calculator">
+
+<h3>
+ Estimated Booking Cost
+</h3>
+
+<p>
+Calculate an estimated cost for your trip.
+</p>
+
+<div class="cost-row">
+<span>Destination</span>
+<span id="destinationCost">M0</span>
+</div>
+
+<div class="cost-row">
+<span>Accommodation</span>
+<span id="accommodationCost">M0</span>
+</div>
+
+<div class="cost-row">
+<span>Activity</span>
+<span id="activityCost">M0</span>
+</div>
+
+<div class="cost-row">
+<span>Guests</span>
+<span id="guestDisplay">1</span>
+</div>
+
+<div class="cost-row">
+<span>Days</span>
+<span id="dayDisplay">1</span>
+</div>
+
+<div class="total-cost" id="totalCost">
+Estimated Total: M0
+</div>
+
+<p class="small mt-3">
+Prices shown are estimated demonstration prices for
+this student project and are not official tourism rates.
+</p>
+
+</div>
+
+<div
+id="bookingMessage"
+class="alert alert-success mt-4 d-none"
+role="alert">
+
+<strong>
+Booking submitted successfully!
+</strong>
+
+Your trip request has been received.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-5">
+
+<div class="form-card">
+
+<h2>Contact Us</h2>
+
+<p class="form-intro">
+Have a question about travelling around Lesotho?
+Send us a message and let us help.
+</p>
+
+<form id="contactForm" novalidate>
+
+<div class="mb-3">
+
+<label for="contactName" class="form-label">
+Name
+</label>
+
+<input
+type="text"
+class="form-control"
+id="contactName"
+required>
+
+<div class="invalid-feedback">
+Please enter your name.
+</div>
+
+</div>
+
+<div class="mb-3">
+
+<label for="contactEmail" class="form-label">
+Email Address
+</label>
+
+<input
+type="email"
+class="form-control"
+id="contactEmail"
+required>
+
+<div class="invalid-feedback">
+Please enter a valid email.
+</div>
+
+</div>
+
+<div class="mb-3">
+
+<label for="contactPhone" class="form-label">
+Phone Number
+</label>
+
+<input
+type="tel"
+class="form-control"
+id="contactPhone"
+placeholder="+266...">
+
+</div>
+
+<div class="mb-3">
+
+<label for="contactSubject" class="form-label">
+Subject
+</label>
+
+<input
+type="text"
+class="form-control"
+id="contactSubject"
+required>
+
+<div class="invalid-feedback">
+Please enter a subject.
+</div>
+
+</div>
+
+<div class="mb-3">
+
+<label for="contactMessageText" class="form-label">
+Message
+</label>
+
+<textarea
+class="form-control"
+id="contactMessageText"
+rows="6"
+placeholder="How can we help you?"
+required></textarea>
+
+<div class="invalid-feedback">
+Please enter your message.
+</div>
+
+</div>
+
+<button type="submit" class="gold-btn">
+✉ Send Message
+</button>
+
+</form>
+
+<div
+id="contactMessage"
+class="alert alert-success mt-4 d-none"
+role="alert">
+
+<strong>
+Message sent successfully!
+</strong>
+
+Thank you for contacting Lesotho Tourism.
+
+</div>
+
+<div class="contact-info">
+
+<h4>
+We're Here For You
+</h4>
+
+<p>
+Whether you need help choosing a destination,
+planning activities or preparing your journey,
+we're ready to help.
+</p>
+
+<div class="contact-item">
+
+<div class="contact-icon">
+
+<img src="destination support.png" alt="Destination support">
+
+</div>
+
+<div>
+<strong>Destination Support</strong>
+<br>
+Explore the Kingdom in the Sky
+</div>
+
+</div>
+
+<div class="contact-item">
+
+<div class="contact-icon">
+
+<img src="travel s icon.png" alt="Travel enquiries">
+
+</div>
+
+<div>
+<strong>Travel Enquiries</strong>
+<br>
+Ask us about your journey
+</div>
+
+</div>
+
+<div class="contact-item">
+
+<div class="contact-icon">
+
+<img src="personal assistance.png" alt="Personal assistance">
+
+</div>
+
+<div>
+<strong>Personal Assistance</strong>
+<br>
+Get help planning your experience
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<section class="why-section">
+
+<div class="row align-items-center g-4">
+
+<div class="col-lg-5">
+
+<img
+src="nice lesotho.webp"
+alt="Beautiful mountain landscape in Lesotho"
+class="why-image">
+
+</div>
+
+<div class="col-lg-7">
+
+<h2>
+Why <span>Book With Us?</span>
+</h2>
+
+<p class="why-intro">
+
+Your journey should be more than simply reaching a destination.
+We help you discover the landscapes, culture and experiences
+that make Lesotho unforgettable.
+
+</p>
+
+<div class="row g-3 mt-2">
+
+<div class="col-sm-6">
+
+<div class="why-card">
+
+<div class="why-icon">
+
+<img src="safty icon.png" alt="Safe and secure">
+
+</div>
+
+<h5>
+Safe & Secure
+</h5>
+
+<p>
+Your booking information is handled with care
+throughout your journey.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-sm-6">
+
+<div class="why-card">
+
+<div class="why-icon">
+
+<img src="travel s icon.png" alt="Travel support">
+
+</div>
+
+<h5>
+Travel Support
+</h5>
+
+<p>
+Get helpful guidance when planning your
+destinations and activities.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-sm-6">
+
+<div class="why-card">
+
+<div class="why-icon">
+
+<img src="local exprience.png" alt="Local experiences">
+
+</div>
+
+<h5>
+Local Experiences
+</h5>
+
+<p>
+Discover mountain landscapes, culture and
+authentic Basotho life.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-sm-6">
+
+<div class="why-card">
+
+<div class="why-icon">
+
+<img src="memo journey icon.png" alt="Memorable journeys">
+
+</div>
+
+<h5>
+Memorable Journeys
+</h5>
+
+<p>
+Turn your visit into an experience
+worth remembering.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="travel-message">
+
+<strong>
+Your adventure starts with one simple step.
+</strong>
+
+Tell us what you are looking for, and start planning
+your Lesotho experience today.
+
+</div>
+
+</section>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="container">
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<div class="footer-brand">
+Lesotho Tourism
+</div>
+
+<p class="mt-3">
+Discover the breathtaking beauty, rich culture
+and warm hospitality of Lesotho.
+</p>
+
+</div>
+
+<div class="col-md-4">
+
+<h5>
+Quick Links
+</h5>
+
+<a href="index.html">Home</a>
+<a href="destinations.html">Destinations</a>
+<a href="activities.html">Activities</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div class="col-md-4">
+
+<h5>
+Start Exploring
+</h5>
+
+<p>
+Ready to discover the Kingdom in the Sky?
+</p>
+
+<a
+href="destinations.html"
+class="gold-btn d-inline-block">
+
+Explore Destinations
+
+</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+© <span id="year"></span>
+Lesotho Tourism.
+All rights reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
